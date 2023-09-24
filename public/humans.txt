@@ -1,7 +1,6 @@
-This Astro starter was built by Shaun Chander!
+Job Site was built by Shaun Chander!
 
-GitHub: https://github.com/shaunchander
-Twitter: https://twitter.com/shaunchander
-Personal: https://shaunchander.me
+GitHub: https://github.com/nandan-varma
+Personal: https://nandanvarma.com
 
 Checkout the https://humanstxt.org/ protocol to see how you should format your humans.txt file!
