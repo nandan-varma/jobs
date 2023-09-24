@@ -1,0 +1,54 @@
+---
+// Component imports
+import { Layout } from "@globals"
+import { Header } from "@globals";
+export type Employee = {
+    name : string,
+    contact : string,
+    work : string,
+    location : string,
+    rating : number
+}
+const employees : Array<Employee> = [
+	{
+		name : "plumber 1",
+		contact : "123-456-7890",
+		work : "Residential",
+		location : "amalapuram",
+		rating : 4.5,
+	},
+	{
+		name : "plumber 2",
+		contact : "123-456-7890",
+		work : "Residential",
+		location : "amalapuram",
+		rating : 4.5,
+	},
+	{
+		name : "plumber 3",
+		contact : "123-456-7890",
+		work : "Residential",
+		location : "amalapuram",
+		rating : 4.5,
+	}
+]
+---
+
+<Header/>
+<Layout title="Jobs">
+	<section class="bg-gray-100 p-8">
+		<div class="flex flex-wrap -mx-4">
+			{employees.map((emp)=>
+				<div class="w-full md:w-1/2 lg:w-1/3 p-4">
+				  <div class="bg-primary rounded-lg shadow-lg p-6 mb-6">
+					<h2 class="text-xl mb-2 font-bold"> {emp.name}</h2>
+					<p>Contact: {emp.contact}</p>
+					<p>Type of Work: {emp.work}</p>
+					<p>Location: {emp.location}</p>
+					<p>Rating: {emp.rating}</p>
+				  </div>
+				</div>
+			)}
+		  <!-- Card 1 -->
+	</section>
+</Layout>
