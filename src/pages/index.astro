@@ -2,6 +2,7 @@
 // Component imports
 import { Layout } from "@globals"
 import { Header } from "@globals";
+import { Button } from "@/components/ui/button"
 export type Employee = {
     name : string,
     contact : string,
@@ -34,13 +35,15 @@ const employees : Array<Employee> = [
 ]
 ---
 
-<Header/>
 <Layout title="Jobs">
-	<section class="bg-gray-100 p-8">
+	<section class="p-8 bg-tertiary">
+		<div class="flex">
+			<a href="/register"><Button>Register</Button></a>
+		</div>
 		<div class="flex flex-wrap -mx-4">
 			{employees.map((emp)=>
 				<div class="w-full md:w-1/2 lg:w-1/3 p-4">
-				  <div class="bg-primary rounded-lg shadow-lg p-6 mb-6">
+				  <div class="rounded-lg shadow-lg p-6 mb-6 bg-secondary">
 					<h2 class="text-xl mb-2 font-bold"> {emp.name}</h2>
 					<p>Contact: {emp.contact}</p>
 					<p>Type of Work: {emp.work}</p>
@@ -49,6 +52,5 @@ const employees : Array<Employee> = [
 				  </div>
 				</div>
 			)}
-		  <!-- Card 1 -->
 	</section>
 </Layout>
