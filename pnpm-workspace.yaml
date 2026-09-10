@@ -1,6 +1,11 @@
 packages:
   - "."
 
+allowBuilds:
+  "@prisma/engines": true
+  esbuild: true
+  prisma: true
+
 overrides:
   lodash: ">=4.18.1"
   deepmerge-ts: ">=8.0.0"
