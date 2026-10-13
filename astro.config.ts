@@ -4,7 +4,6 @@ import { defineConfig } from "astro/config"
 import tailwindcss from "@tailwindcss/vite"
 import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap"
-import compress from "astro-compress"
 import { VitePWA } from "vite-plugin-pwa"
 
 // Helper imports
@@ -12,10 +11,10 @@ import { manifest, seoConfig } from "./utils/seoConfig"
 
 export default defineConfig({
 	site: seoConfig.baseURL,
+	compressHTML: true,
 	integrations: [
 		react(),
-		sitemap(),
-		compress()
+		sitemap()
 	],
 	vite: {
 		plugins: [
