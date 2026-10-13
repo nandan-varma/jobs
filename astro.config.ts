@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config"
 
 // Astro integration imports
-import tailwind from "@astrojs/tailwind"
+import tailwindcss from "@tailwindcss/vite"
 import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap"
 import compress from "astro-compress"
@@ -13,16 +13,13 @@ import { manifest, seoConfig } from "./utils/seoConfig"
 export default defineConfig({
 	site: seoConfig.baseURL,
 	integrations: [
-		tailwind({
-				applyBaseStyles: false,
-				configFile: './tailwind.config.js'
-			}),
 		react(),
 		sitemap(),
 		compress()
 	],
 	vite: {
 		plugins: [
+			tailwindcss(),
 			VitePWA({
 				registerType: "autoUpdate",
 				manifest,
