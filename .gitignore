@@ -20,3 +20,13 @@ pnpm-debug.log*
 .DS_Store
 .vercel
 .env*
+
+# personal job-application workspace files (local only, public repo)
+/AGENTS.md
+/APPLICATIONS.md
+/WORKAROUNDS.md
+/applications.json
+/resume*.pdf
+/resume.tex
+/info.yaml
+/.agents/
